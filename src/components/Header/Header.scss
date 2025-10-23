@@ -1,0 +1,104 @@
+.chat-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+    flex-shrink: 0;
+}
+
+.chat-project-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-project-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+
+    .chat-project-icon {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 4px;
+        width: 36px;
+        height: 36px;
+    }
+
+    span {
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #10b981;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .status-text {
+        font-size: 13px;
+        font-weight: 500;
+        color: white;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-header {
+        padding: 12px 16px;
+    }
+
+    .chat-project-name {
+        font-size: 14px;
+
+        .chat-project-icon {
+            width: 32px;
+            height: 32px;
+            font-size: 20px;
+        }
+    }
+
+    .connection-status .status-text {
+        display: none;
+    }
+}

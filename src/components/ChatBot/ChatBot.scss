@@ -1,0 +1,19 @@
+.chatbot-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f0f9ff, #dbeafe);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .chatbot-container {
+        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height for mobile browsers */
+        border-radius: 0;
+    }
+}
